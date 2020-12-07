@@ -3,6 +3,9 @@
 :root
 {
   --primary-color: #047aed;
+  --secondary-color: #1c3fa8;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
 }
 
 /*
@@ -205,8 +208,56 @@ img
 
 .cli .grid
 {
-  grid-tem: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
+
+.cli .grid > *:first-child
+{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+/*
+###################
+###### CLOUD ######
+###################
+*/
+.cloud .grid
+{
+  grid-template-columns: 4fr 3fr;
+}
+
+
+/*
+###################
+###### CLOUD ######
+###################
+*/
+
+.languages .flex
+{
+  flex-wrap: wrap;
+}
+
+.languages .card
+{
+  text-align: center;
+  margin: 18px 10px 40px;
+  transition: transform 0.2s ease-in;
+}
+
+.languages .card h4
+{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.landguages .card:hover
+{
+  transform: translateY(-15px);
+}
+
 
 /*
 ###################
@@ -252,6 +303,70 @@ img
 .btn:hover
 {
   transform: scale(.97);
+}
+
+/*
+###################
+#### BGS & BTNS ###
+###################
+*/
+.bg-primary,
+.btn-primary
+{
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary
+{
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-light,
+.btn-light
+{
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-dark,
+.btn-dark
+{
+  background: var(--dark-color);
+  color: #fff;
+}
+
+/*
+###################
+#### TXT SIZES ###
+###################
+*/
+
+.lead
+{
+  font-size: 20px;
+}
+
+.sm
+{
+  font-size: 1rem;
+}
+
+.md
+{
+  font-size: 2rem;
+}
+
+.lg
+{
+  font-size: 3rem;
+}
+
+.xl
+{
+  font-size: 4rem;
 }
 
 .text-center
