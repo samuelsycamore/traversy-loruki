@@ -253,9 +253,33 @@ img
   margin-bottom: 10px;
 }
 
-.landguages .card:hover
+.languages .card:hover
 {
   transform: translateY(-15px);
+}
+
+/*
+###################
+#### FEATURES #####
+###################
+*/
+
+.features-head img
+{
+  width: 200px;
+  justify-self: flex-end;
+}
+
+
+/*
+###################
+##### FOOTER ######
+###################
+*/
+
+.footer .social a
+{
+  margin: 0 10px;
 }
 
 
@@ -323,6 +347,17 @@ img
   background: var(--secondary-color);
   color: #fff;
 }
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a
+{
+  color: #fff;
+}
+
 
 .bg-light,
 .btn-light
@@ -507,4 +542,72 @@ img
 .p-5
 {
   padding: 4rem;
+}
+
+
+/*
+###################
+#### TABLETS  #####
+###################
+*/
+
+@media(max-width: 768px)
+{
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid
+  {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .showcase
+  {
+    height: auto;
+  }
+
+  .showcase-text
+  {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .showcase-form
+  {
+    justify-self: center;
+    margin: auto;
+  }
+  .cli .grid > *:first-child
+  {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+
+/*
+###################
+##### MOBILE  #####
+###################
+*/
+
+@media(max-width: 500px)
+{
+  .navbar
+  {
+    height: 110px;
+  }
+
+  .navbar .flex
+  {
+    flex-direction: column;
+  }
+
+  .navbar ul
+  {
+    padding: 10px;
+    background: rgba(0,0,0,0.1);
+  }
 }
