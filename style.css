@@ -6,6 +6,8 @@
   --secondary-color: #1c3fa8;
   --dark-color: #002240;
   --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
 }
 
 /*
@@ -56,6 +58,14 @@ img
 {
   width: 100%;
 }
+
+code, pre
+{
+  background: #333;
+  color: #fff;
+  padding: 10px;
+}
+
 
 /*
 ###################
@@ -299,6 +309,36 @@ img
 
 /*
 ###################
+###### DOCS #######
+###################
+*/
+
+.docs-main h3
+{
+  margin: 20px 0;
+}
+
+.docs-main .grid
+{
+  grid-template-columns: 1fr 2fr;
+  align-items: flex-start;
+}
+
+.docs-main nav li
+{
+  font-size: 17px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.docs-main a:hover
+{
+  font-weight: bold;
+}
+
+/*
+###################
 ##### FOOTER ######
 ###################
 */
@@ -374,17 +414,6 @@ img
   color: #fff;
 }
 
-.bg-primary a,
-.btn-primary a,
-.bg-secondary a,
-.btn-secondary a,
-.bg-dark a,
-.btn-dark a
-{
-  color: #fff;
-}
-
-
 .bg-light,
 .btn-light
 {
@@ -398,6 +427,37 @@ img
   background: var(--dark-color);
   color: #fff;
 }
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a
+{
+  color: #fff;
+}
+
+.text-primary
+{
+  color: var(--primary-color);
+}
+
+.text-secondary
+{
+  color: var(--secondary-color);
+}
+
+.text-light
+{
+  color: var(--light-color);
+}
+
+.text-dark
+{
+  color: var(--dark-color);
+}
+
 
 /*
 ###################
@@ -434,6 +494,38 @@ img
 {
   text-align: center;
 }
+
+/*
+###################
+##### ALERT #######
+###################
+*/
+
+.alert
+{
+  background: var(--light-color);
+  padding: 10px 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.alert i
+{
+  margin-right: 10px;
+}
+
+.alert-success
+{
+  background-color: var(--success-color);
+  color: white;
+}
+
+.alert-error
+{
+  background-color: var(--error-color);
+  color: white;
+}
+
 
 .flex
 {
@@ -516,7 +608,7 @@ img
 
 /*
 ###################
-#### PADDING #####
+#### PADDING ######
 ###################
 */
 
@@ -583,7 +675,9 @@ img
   .showcase .grid,
   .stats .grid,
   .cli .grid,
-  .cloud .grid
+  .cloud .grid,
+  .features-main .grid,
+  .docs-main .grid
   {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -610,7 +704,26 @@ img
     grid-column: 1;
     grid-row: 1;
   }
+
+  .features-head,
+  .features-sub-head,
+  .docs-head
+  {
+    text-align: center;
+  }
+
+  .features-head img,
+  .features-sub-head img,
+  .docs-head img
+  {
+    justify-self: center;
+  }
+
+  .features-main .grid > *:first-child,
+  .features-main .grid > *:nth-child(2)
 }
+
+
 
 
 /*
